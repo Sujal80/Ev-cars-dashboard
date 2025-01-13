@@ -19,7 +19,9 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/Electric_Vehicle_Population_Data.csv");
+      const response = await fetch(
+        process.env.PUBLIC_URL + "/Electric_Vehicle_Population_Data.csv"
+      );
       const csvText = await response.text();
 
       Papa.parse(csvText, {
@@ -83,7 +85,7 @@ const App = () => {
                           <div className="col-auto">
                             <span className="bg-primary text-white avatar">
                               <img
-                                src="/svg/bmw-svgrepo-com.svg"
+                                src={`${process.env.PUBLIC_URL}/svg/bmw-svgrepo-com.svg`}
                                 alt=""
                                 width="24"
                                 height="24"
@@ -107,7 +109,7 @@ const App = () => {
                           <div className="col-auto">
                             <span className="bg-white text-white avatar">
                               <img
-                                src="/svg/audi-svgrepo-com.svg"
+                                src={`${process.env.PUBLIC_URL}/svg/audi-svgrepo-com.svg`}
                                 alt=""
                                 width="24"
                                 height="24"
@@ -131,7 +133,7 @@ const App = () => {
                           <div className="col-auto">
                             <span className="bg-twitter text-white avatar">
                               <img
-                                src="/svg/chevrolet-svgrepo-com.svg"
+                                src={`${process.env.PUBLIC_URL}/svg/chevrolet-svgrepo-com.svg`}
                                 alt=""
                                 width="24"
                                 height="24"
@@ -155,7 +157,7 @@ const App = () => {
                           <div className="col-auto">
                             <span className="bg-facebook text-white avatar">
                               <img
-                                src="/svg/tesla-svgrepo-com.svg"
+                                src={`${process.env.PUBLIC_URL}/svg/tesla-svgrepo-com.svg`}
                                 alt=""
                                 width="24"
                                 height="24"
